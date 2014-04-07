@@ -75,5 +75,5 @@ Author
 ======
 
 Safran Ali
-* @safranali
+* <a href="http://twitter.com/safranali">@safranali</a>
 * http://safranali.info
