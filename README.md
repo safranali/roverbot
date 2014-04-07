@@ -23,14 +23,14 @@ Keyboard Instructions
 
 Use following key to move rover bot in different direction. Press following keys on keyboard
 
-'a'    to add a new bot
-'n'    to move in North direction
-'s'    to move in South direction
-'e'    to move in East direction
-'w'    to move in West direction
-'r'    to turn right in direction
-'l'    to turn left in direction
-'f'    to move in forward direction
+* 'a'    to add a new bot
+* 'n'    to move in North direction
+* 's'    to move in South direction
+* 'e'    to move in East direction
+* 'w'    to move in West direction
+* 'r'    to turn right in direction
+* 'l'    to turn left in direction
+* 'f'    to move in forward direction
 
 
 Input Instructions
@@ -75,5 +75,5 @@ Author
 ======
 
 Safran Ali
-	. @safranali
-	. http://safranali.info
+* @safranali
+* http://safranali.info
