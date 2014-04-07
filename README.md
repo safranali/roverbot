@@ -28,8 +28,8 @@ Use following key to move rover bot in different direction. Press following keys
 * 's'    to move in South direction
 * 'e'    to move in East direction
 * 'w'    to move in West direction
-* 'r'    to turn right in direction
-* 'l'    to turn left in direction
+* 'r'    to turn right
+* 'l'    to turn left
 * 'f'    to move in forward direction
 
 
