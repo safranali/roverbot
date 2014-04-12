@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 				cwd: "styles/css/",
 				src: ["**/*.css"],
 				dest: "styles/build/",
-				ext: ".min.css"	
+				ext: ".min.css"
 			}
 		},
 		concat: {
@@ -68,7 +68,16 @@ module.exports = function(grunt) {
 				tasks: ['concat']
 			}
 		},
-		
+		strip_code: {
+	    options: {
+	      start_comment: "test-code",
+	      end_comment: "end-test-code",
+	    },
+	    your_target: {
+	      // a list of files you want to strip code from
+	      src: "scripts/src/*.js"
+	    }
+	  }
 	});
 
 	/* Loading the registered tasks */
@@ -77,7 +86,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-cssmin");
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	
+	grunt.loadNpmTasks('grunt-strip-code');
+
 	/* Registering all task to default so it can be execute using 'grunt default' command */
 	grunt.registerTask("default", ['less','cssmin','uglify','concat']);
+
+	grunt.registerTask("deploy", ['less','cssmin','uglify','concat','strip-code']);
 };

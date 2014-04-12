@@ -48,8 +48,8 @@ rover.grid = function () {
 
 				for (var y = 0; y < yAxis; y++) {
 					for(var x = xAxis - 1; x >= 0; x--){
-			
-					
+
+
 					_data[_cell] = {
 						id: "cell",
 						x: x,
@@ -63,7 +63,7 @@ rover.grid = function () {
 			}
 
 			// for rendering cells inside in DOM
-			_render(_data);		
+			_render(_data);
 		},
 
 		/*
@@ -83,7 +83,7 @@ rover.grid = function () {
 		 * For checking if the cell is last cell.
 		 */
 		_cellExist = function(x, y) {
-			return x > -1 && x < _xAxis && 
+			return x > -1 && x < _xAxis &&
 					y > -1 && y < _yAxis;
 		},
 
@@ -99,7 +99,7 @@ rover.grid = function () {
 		 * For setting a cell as lost.
 		 */
 		_setLostCell = function (bot, x, y) {
-			
+
 			bot.isLost = true;
 			$reporting.print(bot);
 
@@ -150,12 +150,12 @@ rover.grid = function () {
 			_reportingBox = $getElement(args.reportingBoxId);
 			_cellTemplateId = args.cellTemplateId;
 			_botTemplateId = args.botTemplateId;
-			
+
 			var _xAxis = args.x,
 				_yAxis = args.y;
-			
+
 			if($isNull(_container) || $isNull(_xAxis) || $isNull(_yAxis) ||
-				$isNull(_botTemplateId) || $isNull(_cellTemplateId) || 
+				$isNull(_botTemplateId) || $isNull(_cellTemplateId) ||
 				$isNull(_instructionBox) || $isNull(_executeBtn) || $isNull(_reportingBox)) {
 				return;
 			}

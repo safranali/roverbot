@@ -18,13 +18,9 @@ rover.instruction = function () {
 		_read = function (caller, instructionBox){
 
 			var _input = instructionBox.val(),
-				_instructions = _input.replace("\n\n", "\n").split("\n");
+				_instructions = _filter(_input);
 
-				if(_instructions.length > 100) {
-					alert("Instruction length should be less than 100");
-					return;
-				}
-
+			if(_instructions.length > 0) {
 				// reset output area
 				$reporting.reset();
 
@@ -33,8 +29,24 @@ rover.instruction = function () {
 
 				for(var i=1; i < _instructions.length; i+=2){
 					_addBot(_instructions[i]);
-					_moveBotDirection(_instructions[i+1]);
+					_executeInstructions(_instructions[i+1]);
 				}
+			}
+		},
+
+		/*
+		 * For filtering array, removing empty string value
+		 */
+		_filter = function(instruction) {
+
+			var _arr = instruction.split("\n");
+			for(var i=0;i < _arr.length;i++) {
+				if(_arr[i].length <= 0) {
+					_arr.splice(i, 1);
+					i--;
+				}
+			}
+			return _arr;
 		},
 
 		/*
@@ -63,13 +75,13 @@ rover.instruction = function () {
 
 			$bot.add(_xPosition, _yPosition, 90);
 
-			_moveBotOrientation(_direction);
+			_changeOrientation(_direction);
 		},
 
 		/*
 		 * For moving bot in North, South, East and West orientation using orientation module
 		 */
-		_moveBotOrientation = function(orientation) {
+		_changeOrientation = function(orientation) {
 
 			orientation = orientation.toLowerCase();
 
@@ -87,11 +99,17 @@ rover.instruction = function () {
 		/*
 		 * For moving bot in instructed direction
 		 */
-		_moveBotDirection = function(instruction){
+		_executeInstructions = function(instructions){
 
-			for (var i = 0; i < instruction.length; i++) {
-				
-				var _direction = instruction[i].toLowerCase();
+			// if instructions > 100, throw error
+			if(instructions.length > 100) {
+				alert("Instruction length should be less than 100");
+				return;
+			}
+
+			for (var i = 0; i < instructions.length; i++) {
+
+				var _direction = instructions[i].toLowerCase();
 				if(_direction === "f") {
 					$direction.moveForward();
 				} else if(_direction === "l") {
