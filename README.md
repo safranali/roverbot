@@ -62,10 +62,10 @@ Sample Input
 1 1 E 
 RFRFRFRF
 
-3 2 N 
+3 2 N
 FRRFLLFFRRFLL
 
-0 3 W 
+0 3 W
 LLFFFLFLFL
 
 
