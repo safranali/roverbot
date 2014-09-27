@@ -20,7 +20,7 @@ The grid is rectangular and bounded, a robot that moves “off” an edge of the
 
 Demo
 ====
-http://safranali.info/projects/roverbot/
+http://safranali.com/projects/roverbot/
 
 
 Keyboard Instructions
@@ -81,4 +81,4 @@ Author
 
 Safran Ali
 * <a href="http://twitter.com/safranali">@safranali</a>
-* http://safranali.info
+* http://safranali.com
