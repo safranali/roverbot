@@ -18,11 +18,6 @@ The direction North corresponds to the direction from grid point (x, y) to grid 
 The grid is rectangular and bounded, a robot that moves “off” an edge of the grid is lost forever. However, lost robots leave a robot “scent” that prohibits future robots from dropping off the world at the same grid point. The scent is left at the last grid position the robot occupied before disappearing over the edge. An instruction to move “off” the world from a grid point from which a robot has been previously lost is simply ignored by the current robot.
 
 
-Demo
-====
-http://safranali.com/projects/roverbot/
-
-
 Keyboard Instructions
 =====================
 
@@ -74,11 +69,3 @@ Sample Output
 
 1 1 E
 3 3 N LOST
-
-
-Author
-======
-
-Safran Ali
-* <a href="http://twitter.com/safranali">@safranali</a>
-* http://safranali.com
